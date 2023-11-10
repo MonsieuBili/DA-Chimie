@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DA Chimie! - Lecții</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        function filterLessons() {
+            var searchInput = document.getElementById("searchBar").value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            var lessonDivs = document.querySelectorAll(".lesson");
+            
+            lessonDivs.forEach(function(lesson) {
+                var description = lesson.querySelector("p").textContent.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                var h2 = lesson.querySelector("h2").textContent.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+                if (description.includes(searchInput) || h2.includes(searchInput)) {
+                    lesson.style.display = "block";
+                } else {
+                    lesson.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 style="display: flex; align-items: baseline;">
+                <a href="index.html">
+                    <div class="tag">DA</div> Chimie
+                    <div class="exclamation">!</div>
+                </a>
+            </h1>
+
+            <nav>
+                <a class="button-5 btn-chapter" href="index.html" role="button">Acasă</a>
+                <a class="button-5 btn-chapter" href="capitole.html" role="button">Capitole</a>
+                <a class="button-5 btn-chapter" html="despre.html" role="button">Despre</a>
+
+                <input type="text" class="input-5 btn-chapter" id="searchBar" placeholder="Caută lecții" oninput="filterLessons()">
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2 id="capitol-1">Capitolul I <div class="slim">- Noțiuni de termochimie</div></h2>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Clasificarea reacțiilor chimice</h2>
+            <p>Această lecție prezintă o introducere în clasificarea reacțiilor chimice și discută diferitele tipuri de reacții, inclusiv reacții exoterme și reacții endoterme.</p>
+            
+            <a class="button-5" href="lectii/lectie-clasificarea-reactiilor-chimice.html" role="button">Vezi lecție</a>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Reacții exoterme. Reacții endoterme.</h2>
+            <p>Această lecție explorează reacțiile exoterme și endoterme, oferind exemple și explicând diferențele între aceste două tipuri de reacții chimice.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Entalpie de reacție</h2>
+            <p>Această lecție detaliază conceptul de entalpie de reacție și modul în care acesta este utilizat pentru a evalua schimbările de energie în reacțiile chimice.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Legea Hess</h2>
+            <p>Legea Hess este prezentată în această lecție, explicând cum poate fi folosită pentru a calcula variațiile de entalpie în reacțiile chimice.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Căldura de dizolvare</h2>
+            <p>În această lecție, veți învăța despre căldura de dizolvare și modul în care aceasta este implicată în procesul de dizolvare a substanțelor chimice în soluții.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Căldura de neutralizare (acid tare - bază tare)</h2>
+            <p>Această lecție explică conceptul de căldură de neutralizare în reacțiile acizilor tari cu baze tari, oferind exemple și aplicații practice.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de termochimie</h3>
+            <h2>Căldura de combustie - arderea hidrocarburilor</h2>
+            <p>Această lecție se concentrează asupra căldurii de combustie și a procesului de ardere a hidrocarburilor, ilustrând aspectele legate de acest proces chimic.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+
+        <br><br><br>
+        <h2 id="capitol-2">Capitolul II <div class="slim">- Noțiuni de cinetică chimică</div></h2>
+        <div class="lesson">
+            <h3>Noțiuni de cinetică chimică</h3>
+            <h2>Viteza de reacție</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de cinetică chimică</h3>
+            <h2>Legea vitezei</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de cinetică chimică</h3>
+            <h2>Reacții lente. Reacții rapide.</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de cinetică chimică</h3>
+            <h2>Catalizatori. Inhibitori.</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Noțiuni de cinetică chimică</h3>
+            <h2>Importanța enzimelor</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+
+        <br><br><br>
+        <h2 id="capitol-3">Capitolul III <div class="slim">- Reacții cu formare de combinații complexe</div></h2>
+        <div class="lesson">
+            <h3>Reacții cu formare de cominații complexe</h3>
+            <h2>Combinații complexe</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Reacții cu formare de cominații complexe</h3>
+            <h2>Obținerea combinațiilor complexe</h2>
+            <p>Reactivul Schweitzer, reactivul Tollens, combinații complexe ale ionului Co2+: [CoCl4]2-,  [Co(NCS)4]2-</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Reacții cu formare de cominații complexe</h3>
+            <h2>Aplicații ale combinațiilor complexe</h2>
+            <p>Reacțiile ionilor Fe3+ și Cu2+ cu [Fe(cN)6]4-.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+
+        <br><br><br>
+        <h2 id="capitol-4">Capitolul IV <div class="slim">- Reacții cu formare de combinații greu solubile</div></h2>
+        <div class="lesson">
+            <h3>Reacții cu formare de combinații greu solubile</h3>
+            <h2>Reacții de precipitare</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Reacții cu formare de combinații greu solubile</h3>
+            <h2>Identificarea cationilor</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+        <div class="lesson">
+            <h3>Reacții cu formare de combinații greu solubile</h3>
+            <h2>Identificarea anionilor.</h2>
+            <p>Descriere.</p>
+            
+            <button class="button-5" role="button">Vezi lecție</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 <b>Echipa Chimie XII C</b>
+    </footer>
+</body>
+</html>
