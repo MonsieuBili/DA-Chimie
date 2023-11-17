@@ -187,6 +187,7 @@ footer {
 
 h2 {
     display: flex;
+    align-items: center;
 }
 
 .exclamation {
@@ -220,8 +221,10 @@ a {
 
 .center {
     display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 1.1em;
+
+    margin-top: 32px;
+    margin-bottom: 32px;
 
     margin-left: 24px;
     margin-right: 24px;
@@ -250,4 +253,30 @@ span.important {
 
 #references .lesson a {
     width: 100%;
+}
+
+#references .lesson:hover {
+    scale: 1.02;
+}
+
+#references .lesson:hover a {
+    scale: 1.035;
+}
+
+.number {
+    width: 1.35em;
+    height: 1.35em;
+    user-select: none;
+    padding: 0.2em 0.15em 0.1em 0.15em;
+    background: #ff6600;
+    box-shadow: 0 0 14px #ff6600ee;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 0.65em;
+}
+
+.body {
+    font-size: 1.2em;
+    margin-left: 65px;
 }
